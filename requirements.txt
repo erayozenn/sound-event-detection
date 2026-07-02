@@ -1,0 +1,36 @@
+# ============================================================
+# How to set up this project on another computer
+# ============================================================
+# 1. Make sure Python 3.10-3.12 is installed:
+#        python --version
+# 2. Open a terminal in this project folder (where this file is).
+# 3. Create a fresh virtual environment:
+#        python -m venv .venv
+# 4. Activate it:
+#        Windows (PowerShell):  .\.venv\Scripts\activate
+#        Mac / Linux:           source .venv/bin/activate
+# 5. Install everything with ONE command (installs all packages below):
+#        pip install -r requirements.txt
+# 6. Launch the notebook:
+#        jupyter notebook
+#
+# Notes:
+#   - If "tensorflow" fails to install, delete its line below and run step 5 again.
+#     The notebook will then simply skip the CNN part (Section 7) and still run.
+#   - If step 4 is blocked on Windows, run once:
+#        Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
+# ============================================================
+
+# Core pipeline (required)
+numpy==2.4.6
+scipy==1.17.1          # used directly for writing the synthetic .wav files
+matplotlib==3.10.9
+librosa==0.11.0
+scikit-learn==1.8.0
+soundfile==0.13.1      # librosa backend for reading/writing .wav files
+
+# Deep-learning model (optional — Section 7 CNN; notebook auto-skips if absent)
+tensorflow==2.21.0
+
+# To run the notebook itself
+jupyter==1.1.1
